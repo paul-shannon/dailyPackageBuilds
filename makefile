@@ -15,3 +15,6 @@ TrenaProjectPlacenta:
 
 TrenaProjectLiver:
 	(cd ~/github/TrenaProjectLiver; git pull; make; R -f inst/unitTests/test_TrenaProjectLiver.R)
+
+TrenaProjectErythropoiesis:
+	(cd ~/github/TrenaProjectErythropoiesis; git pull; make; R -f inst/unitTests/test_TrenaProjectErythro.R)
