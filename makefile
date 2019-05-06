@@ -1,7 +1,7 @@
-default:  trena trenaSGM  TrenaProject TrenaProjectLiver
+default:  trena trenaSGM TrenaProject TrenaProjectHG38 TrenaProjectLymphocyte
 
 trena:
-	(cd ~/github/trena; git pull; make; R -f inst/unitTests/test_Trena.R)
+	(cd ~/github/trena; git pull; make -f build.makefile; R -f inst/unitTests/test_Trena.R)
 
 trenaSGM:
 	(cd ~/github/trenaSGM; git pull; make; R -f inst/unitTests/test_trenaSGM.R)
@@ -10,11 +10,11 @@ trenaSGM:
 TrenaProject:
 	(cd ~/github/TrenaProject; git pull; make; R -f inst/unitTests/test_TrenaProject.R)
 
-TrenaProjectPlacenta:
-	(cd ~/github/TrenaProjectPlacenta; git pull; make; R -f inst/unitTests/test_TrenaProjectPlacenta.R)
+TrenaProjectHG38:
+	(cd ~/github/TrenaProjectHG38; git pull; make; R -f inst/unitTests/test_TrenaProjectHG38.R)
 
-TrenaProjectLiver:
-	(cd ~/github/TrenaProjectLiver; git pull; make; R -f inst/unitTests/test_TrenaProjectLiver.R)
+TrenaProjectLymphocyte:
+	(cd ~/github/TrenaProjectLymphocyte; git pull; make; R -f inst/unitTests/test_TrenaProjectLymphocyte.R)
 
 TrenaProjectErythropoiesis:
 	(cd ~/github/TrenaProjectErythropoiesis; git pull; make; R -f inst/unitTests/test_TrenaProjectErythro.R)
