@@ -1,11 +1,10 @@
-default:  trena trenaSGM TrenaProject TrenaProjectHG38 TrenaProjectLymphocyte
+default:  trena trenaSGM TrenaProject TrenaProjectHG38 TrenaProjectLymphocyte TrenaProjectScerevisiae
 
 trena:
 	(cd ~/github/trena; git pull; make -f build.makefile; R -f inst/unitTests/test_Trena.R)
 
 trenaSGM:
-	(cd ~/github/trenaSGM; git pull; make; R -f inst/unitTests/test_trenaSGM.R)
-	(cd ~/github/trenaSGM; R -f inst/unitTests/test_FootprintDatabaseModelBuilder.R)
+	(cd ~/github/trenaSGM; git pull; make; make test)
 
 TrenaProject:
 	(cd ~/github/TrenaProject; git pull; make; R -f inst/unitTests/test_TrenaProject.R)
@@ -18,3 +17,6 @@ TrenaProjectLymphocyte:
 
 TrenaProjectErythropoiesis:
 	(cd ~/github/TrenaProjectErythropoiesis; git pull; make; R -f inst/unitTests/test_TrenaProjectErythro.R)
+
+TrenaProjectScerevisiae:
+	(cd ~/github/TrenaProjectScerevisiae; git pull; make; R -f inst/unitTests/test_TrenaProjectScerevisiae.R)
