@@ -7,6 +7,7 @@ trena:
 	(cd ~/github/trena  && git pull  && make -f build.makefile install  && make -f build.makefile unitTests) 
 
 trenaSGM:
+	- (cd ~/github/fimoService/server; make -f makefile.unitTests)   # may already be running
 	(cd ~/github/trenaSGM  && git pull  && make  && make test)
 
 TrenaProject:
