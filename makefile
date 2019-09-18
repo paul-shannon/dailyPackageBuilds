@@ -1,7 +1,7 @@
 default:  trena trenaSGM projects
 
 projects: TrenaProject TrenaProjectHG38 placenta TrenaProjectLymphocyte TrenaProjectScerevisiae TrenaProjectErythropoiesis \
-          TrenaProjectBrainCell  TrenaProjectMM10 TrenaProjectArabidopsisRoot  bv igvR
+          TrenaProjectBrainCell  TrenaProjectLiver TrenaProjectMM10 TrenaProjectArabidopsisRoot  bv igvR
 
 trena:
 	(cd ~/github/trena  && git pull  && make -f build.makefile install  && make -f build.makefile unitTests) 
@@ -24,6 +24,9 @@ brainCell:
 
 TrenaProjectLymphocyte:
 	(cd ~/github/TrenaProjectLymphocyte  && git pull  && make  && make test)
+
+TrenaProjectLiver:
+	(cd ~/github/TrenaProjectLiver  && git pull  && make  && make test)
 
 TrenaProjectErythropoiesis:
 	(cd ~/github/TrenaProjectErythropoiesis  && git pull  && make  && make test)
