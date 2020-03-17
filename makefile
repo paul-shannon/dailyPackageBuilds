@@ -1,7 +1,7 @@
-default:  trena trenaSGM projects
+default:  trena trenaSGM projects trenaMultiScore
 
-projects: TrenaProject TrenaProjectHG38 placenta TrenaProjectLymphocyte TrenaProjectScerevisiae TrenaProjectErythropoiesis \
-          TrenaProjectBrainCell  TrenaProjectLiver TrenaProjectMM10 TrenaProjectArabidopsisRoot  bv igvR
+projects: bv igvR TrenaProject TrenaProjectHG38 placenta TrenaProjectLymphocyte TrenaProjectScerevisiae TrenaProjectErythropoiesis \
+          TrenaProjectBrainCell  TrenaProjectLiver TrenaProjectMM10 TrenaProjectArabidopsisRoot
 
 trena:
 	(cd ~/github/trena  && git pull  && make -f build.makefile install  && make -f build.makefile unitTests) 
@@ -9,6 +9,9 @@ trena:
 trenaSGM:
 	- (cd ~/github/fimoService/server; make -f makefile.unitTests)   # may already be running
 	(cd ~/github/trenaSGM  && git pull  && make  && make test)
+
+trenaMultiScore:
+	- (cd ~/github/TrenaMultiScore && git pull && make && make test)
 
 TrenaProject:
 	(cd ~/github/TrenaProject  && git pull  && make  && make test)
