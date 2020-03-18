@@ -1,0 +1,2 @@
+#/bin/bash
+cat dailyBuilds.log | egrep 'git pull|Error' | egrep -v pcaError
