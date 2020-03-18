@@ -1,0 +1,2 @@
+6 10 * * * /bin/bash /Users/paul/github/dailyPackageBuilds/buildAll.sh > /dev/null
+
