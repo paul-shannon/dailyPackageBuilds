@@ -1,9 +1,12 @@
-default:  trena trenaSGM projects trenaMultiScore
+default:  motifDb trena trenaSGM projects trenaMultiScore
 
 browserViz: bv igvR 
 
 projects: TrenaProject TrenaProjectHG38 TrenaProjectHG38.generic placenta TrenaProjectLymphocyte TrenaProjectErythropoiesis \
           TrenaProjectBrainCell  TrenaProjectLiver TrenaProjectMM10
+
+motifDb:
+	(cd ~/github/MotifDb && git pull && make -f build.makefile install && make -f build.makefile test)
 
 trena:
 	(cd ~/github/trena  && git pull  && make -f build.makefile install  && make -f build.makefile unitTests) 

@@ -19,6 +19,7 @@ code.pkgs <- c(
     "BSgenome.Hsapiens.UCSC.hg38",
     "BSgenome.Mmusculus.UCSC.mm10",
     "BSgenome.Scerevisiae.UCSC.sacCer3",
+    "EnsDb.Hsapiens.v79",
     "colorspace",
     "DBI",
     "DT",
