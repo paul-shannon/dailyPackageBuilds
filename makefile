@@ -2,7 +2,7 @@ default:  trena trenaSGM projects trenaMultiScore
 
 browserViz: bv igvR 
 
-projects: TrenaProject TrenaProjectHG38 TrenaProjectHG38.generic placenta TrenaProjectLymphocyte TrenaProjectScerevisiae TrenaProjectErythropoiesis \
+projects: TrenaProject TrenaProjectHG38 TrenaProjectHG38.generic AD placenta TrenaProjectLymphocyte TrenaProjectScerevisiae TrenaProjectErythropoiesis \
           TrenaProjectBrainCell  TrenaProjectLiver TrenaProjectMM10 TrenaProjectArabidopsisRoot
 
 trena:
@@ -23,6 +23,9 @@ TrenaProjectHG38:
 
 TrenaProjectHG38.generic:
 	(cd ~/github/TrenaProjectHG38.generic  && git pull  && make  && make test)
+
+AD:
+	(cd ~/github/TrenaProjectAD  && git pull  && make &&  make test)
 
 placenta:
 	(cd ~/github/TrenaProjectPlacenta  && git pull  && make &&  make test)
